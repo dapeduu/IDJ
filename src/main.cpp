@@ -1,4 +1,4 @@
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 int main(int argc, char** argv) {
   if (SDL_Init(SDL_INIT_VIDEO) != 0) return 1;
@@ -12,6 +12,7 @@ int main(int argc, char** argv) {
       if (e.type == SDL_QUIT) running = false;
     }
     SDL_Delay(16);
+    printf("Hello, World!\n");
   }
   SDL_DestroyWindow(win);
   SDL_Quit();

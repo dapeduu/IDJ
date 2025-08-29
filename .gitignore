@@ -35,3 +35,10 @@ compile_commands.json
 *.app
 *.exe
 *.log
+
+bin/
+dep/
+*.o
+*.d
+JOGO
+JOGO.exe

@@ -2,18 +2,20 @@
 
 ## Setup
 
-You must have homebrew installed. 
+You must have homebrew installed, to install the dependencies, bear and pkg-config are also required for building and ide support. 
 
 Then run `brew bundle` to install the dependencies.
 
 ## Build
 
-Run `cmake --build --preset release` to build the project.
+`make debug` or `make release` to build the project.
 
-You can also run `cmake --build --preset debug` to build the project in debug mode.
+On the first time, run `bear -- make debug|release` to generate the compile_commands.json file for better ide support. 
 
 ## Run
 
-Run `./build/Release/idj` to run the project.
+`./JOGO`
 
-Run `lldb ./build/Debug/idj` to debug the project.
+## Observations
+
+The makefile was modified so that on macos we prefer getting the libraries from pkg config, instead of framework, so we can just brew install everything.
